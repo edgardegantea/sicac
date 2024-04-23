@@ -32,7 +32,7 @@ class RegistroController extends BaseController
     public function create()
     {
         $data = [
-            'perfil'            => 3,
+            'perfil'            => 4,
             'identificador'     => $this->request->getVar('identificador'),
             'nombre'            => $this->request->getVar('nombre'),
             'apaterno'          => $this->request->getVar('apaterno'),

@@ -54,7 +54,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label class="form-label" for="">Número de control:</label>
-                        <input class="form-control" min="8" max="12" required type="text" name="codigo">
+                        <input class="form-control" min="3" max="30" required type="text" name="identificador">
                     </div>
                 </div>
 
