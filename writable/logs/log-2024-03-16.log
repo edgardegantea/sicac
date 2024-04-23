@@ -1,0 +1,486 @@
+INFO - 2024-03-16 18:33:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 18:33:18 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'asesoriasitst24' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'asesoriasitst24', 3306, '', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'asesoriasitst24' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-03-16 18:33:18 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'asesoriasitst24'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 8 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+INFO - 2024-03-16 18:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 18:58:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'asesoriasitst24' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'asesoriasitst24', 3306, '', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'asesoriasitst24' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-03-16 18:58:21 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'asesoriasitst24'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 8 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+INFO - 2024-03-16 19:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 19:00:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'competencias', 3306, '', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-03-16 19:00:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 8 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+INFO - 2024-03-16 19:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 19:02:36 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'competencias', 3306, '', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-03-16 19:02:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,password', [...], null, 'password')
+ 7 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 8 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+INFO - 2024-03-16 19:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 19:08:57 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-03-16 19:08:57 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 7 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+INFO - 2024-03-16 19:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 19:12:56 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-03-16 19:12:56 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 7 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+INFO - 2024-03-16 19:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-16 19:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-16 19:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-16 19:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 19:16:07 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,p...', Array, NULL, 'password')
+#8 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#9 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 C:\xampp\htdocs\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-03-16 19:16:07 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('12345678', 'identificador,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', [...], [...])
+ 7 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+INFO - 2024-03-16 19:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-16 19:17:31 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', Array, NULL, 'identificador')
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', Array, Array)
+#7 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\sicac\app\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-03-16 19:17:31 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', [...], null, 'identificador')
+ 4 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', [...], [...])
+ 5 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+ERROR - 2024-03-16 19:17:44 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', Array, NULL, 'identificador')
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', Array, Array)
+#7 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\sicac\app\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-03-16 19:17:44 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', [...], null, 'identificador')
+ 4 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', [...], [...])
+ 5 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+ERROR - 2024-03-16 19:18:34 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', Array, NULL, 'identificador')
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', Array, Array)
+#7 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\sicac\app\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-03-16 19:18:34 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', [...], null, 'identificador')
+ 4 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', [...], [...])
+ 5 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
+ERROR - 2024-03-16 19:18:41 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sicac\system\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sicac\system\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', Array, NULL, 'identificador')
+#6 C:\xampp\htdocs\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', Array, Array)
+#7 C:\xampp\htdocs\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\sicac\app\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\sicac\system\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+#10 C:\xampp\htdocs\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+#11 C:\xampp\htdocs\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\sicac\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-03-16 19:18:41 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('20TE0422', 'identificador', [...], null, 'identificador')
+ 4 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '20TE0422', [...], [...])
+ 5 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sicac\\public\\index.php')
