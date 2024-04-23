@@ -8,7 +8,7 @@ class Userrules
     public function validateUser(string $str, string $fields, array $data) {
         $model = new UsuarioModel();
         
-        $user = $model->where('codigo', $data['codigo'])->first();
+        $user = $model->where('identificador', $data['identificador'])->first();
         
         if (!$user) {
             return false;

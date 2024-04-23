@@ -6,3 +6,166 @@ INFO - 2024-04-23 18:20:52 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-04-23 18:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-04-23 18:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-04-23 18:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 18:34:51 --> mysqli_sql_exception: Unknown column 'perfil' in 'field list' in E:\itst\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\itst\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\itst\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\itst\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\itst\sicac\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\itst\sicac\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 E:\itst\sicac\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 E:\itst\sicac\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 E:\itst\sicac\app\Controllers\RegistroController.php(64): CodeIgniter\Model->insert(Array)
+#8 E:\itst\sicac\system\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+#9 E:\itst\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+#10 E:\itst\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\itst\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 E:\itst\sicac\system\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\p...')
+#13 {main}
+CRITICAL - 2024-04-23 18:34:51 --> Unknown column 'perfil' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`perfil`, `identificador`, `nombre`, `apaterno`, `amaterno`, `email`, `password`, `sexo`, `status`) VALUES (:perfil:, :identificador:, :nombre:, :apaterno:, :amaterno:, :email:, :password:, :sexo:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegistroController.php(64): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\public\\index.php')
+INFO - 2024-04-23 18:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 18:42:30 --> mysqli_sql_exception: Unknown column 'identificador' in 'where clause' in E:\itst\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\itst\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 E:\itst\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 E:\itst\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 E:\itst\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 E:\itst\sicac\system\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\itst\sicac\system\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('100000', 'identificador', Array, NULL, 'identificador')
+#6 E:\itst\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '100000', Array, Array)
+#7 E:\itst\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#8 E:\itst\sicac\app\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate(Array)
+#9 E:\itst\sicac\system\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+#10 E:\itst\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+#11 E:\itst\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\itst\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 E:\itst\sicac\system\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\p...')
+#14 {main}
+CRITICAL - 2024-04-23 18:42:30 --> Unknown column 'identificador' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `identificador` = :identificador:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(212): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(311): CodeIgniter\Validation\StrictRules\Rules->is_unique('100000', 'identificador', [...], null, 'identificador')
+ 4 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('identificador', 'identificador', '100000', [...], [...])
+ 5 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\RegistroController.php(53): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\RegistroController->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\public\\index.php')
+INFO - 2024-04-23 18:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 18:44:37 --> mysqli_sql_exception: Unknown column 'codigo' in 'where clause' in E:\itst\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\itst\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\itst\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\itst\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\itst\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\itst\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\itst\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\itst\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 E:\itst\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('1234567890', 'identificador,p...', Array, NULL, 'password')
+#8 E:\itst\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '1234567890', Array, Array)
+#9 E:\itst\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 E:\itst\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 E:\itst\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 E:\itst\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 E:\itst\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 E:\itst\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 E:\itst\sicac\system\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\p...')
+#16 {main}
+CRITICAL - 2024-04-23 18:44:37 --> Unknown column 'codigo' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `codigo` = :codigo:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('1234567890', 'identificador,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '1234567890', [...], [...])
+ 7 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\public\\index.php')
+INFO - 2024-04-23 18:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-04-23 18:45:49 --> mysqli_sql_exception: Unknown column 'codigo' in 'where clause' in E:\itst\sicac\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\itst\sicac\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\itst\sicac\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\itst\sicac\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\itst\sicac\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\itst\sicac\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\itst\sicac\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 E:\itst\sicac\app\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+#7 E:\itst\sicac\system\Validation\Validation.php(311): App\Validation\Userrules->validateUser('1234567890', 'identificador,p...', Array, NULL, 'password')
+#8 E:\itst\sicac\system\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '1234567890', Array, Array)
+#9 E:\itst\sicac\system\Controller.php(152): CodeIgniter\Validation\Validation->run()
+#10 E:\itst\sicac\app\Controllers\UserController.php(28): CodeIgniter\Controller->validate(Array, Array)
+#11 E:\itst\sicac\system\CodeIgniter.php(942): App\Controllers\UserController->login()
+#12 E:\itst\sicac\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#13 E:\itst\sicac\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 E:\itst\sicac\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#15 E:\itst\sicac\system\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\p...')
+#16 {main}
+CRITICAL - 2024-04-23 18:45:49 --> Unknown column 'codigo' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `codigo` = :codigo:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Validation\Userrules.php(11): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('1234567890', 'identificador,password', [...], null, 'password')
+ 6 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '1234567890', [...], [...])
+ 7 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+ 9 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\public\\index.php')
+INFO - 2024-04-23 18:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-23 18:46:04 --> Undefined array key "codigo"
+in APPPATH\Validation\Userrules.php on line 11.
+ 1 APPPATH\Validation\Userrules.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'E:\\itst\\sicac\\app\\Validation\\Userrules.php', 11)
+ 2 SYSTEMPATH\Validation\Validation.php(311): App\Validation\Userrules->validateUser('1234567890', 'identificador,password', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('password', 'password', '1234567890', [...], [...])
+ 4 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 5 APPPATH\Controllers\UserController.php(28): CodeIgniter\Controller->validate([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\itst\\sicac\\public\\index.php')
+INFO - 2024-04-23 18:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:47:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-23 18:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

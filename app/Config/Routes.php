@@ -30,7 +30,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 
 // Rutas para el jefe de carrera
 $routes->group('jefecarrera', ['filter' => 'auth'], function ($routes) {
-    $routes->get('/', 'JefeCarerra\JefeCarreraController::index');
+    $routes->get('/', 'JefeCarrera\JefeCarreraController::index');
 }
 );
 

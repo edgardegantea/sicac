@@ -88,8 +88,8 @@
         <h2>SICAC</h2>
         <form action="<?= base_url('login'); ?>" method="post">
             <div class="input-container">
-                <label for="codigo">Número de huella o identificado:</label>
-                <input type="text" id="codigo" name="codigo" required>
+                <label for="identificador">Número de huella o identificado:</label>
+                <input type="text" id="identificador" name="identificador" required>
             </div>
             <div class="input-container">
                 <label for="password">Contraseña:</label>
