@@ -34,66 +34,15 @@
                     <li class="sidebar-header">
                         Principal
                     </li>
+
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
-                            <i class="fa-solid fa-person-chalkboard pe-2"></i></i>
+                        <a href="<?= site_url('jefecarrera/dashboard') ?>" class="sidebar-link">
+                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
                             Competencias
                         </a>
+
                     </li>
-
-                    <li class="sidebar-item">
-                        <a href="<?= base_url('admin/usuarios') ?>" class="sidebar-link">
-                            <i class="fa-solid fa-users pe-2"></i>
-                            Usuarios
-                        </a>
-                    </li>
-
-
-
                     
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>
-                            Módulos
-                        </a>
-                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="<?= base_url('admin/carreras') ?>" class="sidebar-link">Carreras</a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="<?= base_url('admin/asignaturas') ?>" class="sidebar-link">Asignaturas</a>
-                            </li>
-
-
-
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Grupos</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-header">
-                        Multi Level Menu
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
-                            Multi Dropdown
-                        </a>
-                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
-                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
-                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.1</a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="#" class="sidebar-link">Level 1.2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </aside>
@@ -220,6 +169,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
+
+
+
+    
+
+    
 
 </body>
 

@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+<?= $this->extend('template/mainJefeCarrera'); ?>
+
+<?= $this->section('content'); ?>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
+
     <div style="width: 80%; margin: auto;">
         <canvas id="myChart"></canvas>
     </div>
@@ -57,5 +56,4 @@
             }
         });
     </script>
-</body>
-</html>
+<?= $this->endSection(); ?>
