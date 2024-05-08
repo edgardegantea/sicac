@@ -9,6 +9,8 @@
     
     <h2>Usuarios registrados en el sistema</h2>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-5">
+        <a class="btn btn-primary me-md-2 mr-1" href="<?= site_url('jefedecarrera/'); ?>">Regresar</a>
+        <a class="btn btn-primary" href="<?= site_url('jefedecarrera/usuarios/new') ?>">Agregar usuario</a>
     </div>
 
 
@@ -54,8 +56,10 @@
                             Administrador
                         <?php elseif($usuario['perfil'] == 2): ?>
                             Docente
-                        <?php else: ?>
+                        <?php elseif($usuario['perfil'] == 3): ?>
                             Alumno
+                        <?php else: ?>
+                            Jefe de Carrera
                         <?php endif; ?>
                     </td>
                     <td><?= $usuario['identificador']; ?></td>
@@ -69,12 +73,12 @@
                     </td> -->
                     <td>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <a href="<?= base_url('admin/usuarios/'.$usuario['id'].'/edit'); ?>" class="btn btn-sm btn-light me-md-2 mr-1"><i class="fas fa-edit"></i></a>
-                        <form method="post" action="<?= base_url('admin/usuarios/'.$usuario['id']); ?>" id="usuarioDeleteForm<?=$usuario['id']?>">
+                        <a href="<?= base_url('jefedecarrera/usuarios/'.$usuario['id'].'/edit'); ?>" class="btn btn-sm btn-light me-md-2 mr-1"><i class="fas fa-edit"></i></a>
+                        <form method="post" action="<?= base_url('jefedecarrera/usuarios/'.$usuario['id']); ?>" id="usuarioDeleteForm<?=$usuario['id']?>">
                             <input type="hidden" name="_method" value="DELETE"/>
                             <a href="javascript:void(0)" onclick="deleteUsuario('usuarioDeleteForm<?=$usuario['id']; ?>')" class="btn btn-sm btn-danger mr-1" title="Eliminar registro"><i class="fas fa-trash"></i></a>
                         </form>
-                        <a href="<?php echo base_url('admin/usuarios/edit_password/' . $usuario['id']); ?>" class="btn bt-sm btn-default mr-1"><i class="fas fa-key"></i></a>
+                        <a href="<?php echo base_url('jefedecarrera/usuarios/edit_password/' . $usuario['id']); ?>" class="btn bt-sm btn-default mr-1"><i class="fas fa-key"></i></a>
                         </div>
                         
                     </td>
@@ -88,7 +92,7 @@
                         <div class="modal-content">
 
                             <div class="modal-body">
-                                <form action="<?= base_url('admin/usuarios/' . $usuario['id']) ?>" method="post">
+                                <form action="<?= base_url('jefedecarrera/usuarios/' . $usuario['id']) ?>" method="post">
 
                                 <?= csrf_field() ?>
 
@@ -147,7 +151,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="<?= base_url('admin/usuarios') ?>" method="post">
+        <form action="<?= base_url('jefedecarrera/usuarios') ?>" method="post">
 
             <h5>Información básica del usuario</h5>
             <div class="row">
@@ -285,6 +289,7 @@
         }
     }
 </script>
+
 
 <?= $this->endSection(); ?>
 

@@ -17,4 +17,5 @@ class JefeCarreraModel extends Model
         // Devolver los resultados como un arreglo de filas
         return $query->getResultArray();
     }
+
 }

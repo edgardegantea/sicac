@@ -37,10 +37,16 @@
 
                     <li class="sidebar-item">
                         <a href="<?= site_url('jefecarrera/dashboard') ?>" class="sidebar-link">
-                    <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                        <i class="fa-solid fa-person-chalkboard pe-2"></i>
                             Competencias
                         </a>
+                    </li>
 
+                    <li class="sidebar-item">
+                        <a href="<?= site_url('jefecarrera/usuarios') ?>" class="sidebar-link">
+                        <i class="fa-solid fa-person-chalkboard pe-2"></i>
+                            Usuarios
+                        </a>
                     </li>
                     
                 </ul>

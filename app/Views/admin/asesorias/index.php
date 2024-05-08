@@ -56,8 +56,10 @@
                             Administrador
                         <?php elseif($usuario['perfil'] == 2): ?>
                             Docente
-                        <?php else: ?>
+                        <?php elseif($usuario['perfil'] == 3): ?>
                             Alumno
+                        <?php else: ?>
+                            Jefe de Carrera
                         <?php endif; ?>
                     </td>
                     <td><?= $usuario['identificador']; ?></td>
